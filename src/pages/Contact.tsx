@@ -14,8 +14,8 @@ const fadeUp = {
 export default function Contact() {
   return (
     <PageTransition>
-      <section className="max-w-4xl mx-auto px-6 py-16">
-        <h1 className="text-4xl text-center mb-12">İletişim</h1>
+      <section className="max-w-4xl mx-auto px-6 py-10 md:py-16">
+        <h1 className="text-3xl md:text-4xl text-center mb-8 md:mb-12">İletişim</h1>
 
         <div className="grid md:grid-cols-2 gap-10">
           <motion.div

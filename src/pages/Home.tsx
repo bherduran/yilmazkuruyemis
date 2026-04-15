@@ -17,7 +17,7 @@ const fadeUp = {
 export default function Home() {
   return (
     <PageTransition>
-      <section className="max-w-6xl mx-auto px-6 py-24 text-center">
+      <section className="max-w-6xl mx-auto px-6 py-14 md:py-24 text-center">
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -30,7 +30,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.5, ease: 'easeOut' }}
-          className="text-5xl md:text-6xl font-serif text-coffee mb-6"
+          className="text-4xl md:text-6xl font-serif text-coffee mb-6"
         >
           Yılmaz Kuruyemiş
         </motion.h1>
@@ -61,7 +61,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.5 }}
-        className="max-w-3xl mx-auto px-6 py-16 text-center"
+        className="max-w-3xl mx-auto px-6 py-10 md:py-16 text-center"
       >
         <h2 className="text-3xl mb-6">Hakkımızda</h2>
         <p className="text-ink/80 leading-relaxed">
@@ -70,12 +70,12 @@ export default function Home() {
         </p>
       </motion.section>
 
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      <section className="max-w-6xl mx-auto px-6 py-10 md:py-16">
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-3xl text-center mb-12"
+          className="text-2xl md:text-3xl text-center mb-8 md:mb-12"
         >
           Kategoriler
         </motion.h2>
@@ -90,7 +90,7 @@ export default function Home() {
             <motion.div key={c} variants={fadeUp}>
               <Link
                 to={`/urunler?kategori=${encodeURIComponent(c)}`}
-                className="block border border-coffee/15 bg-white py-10 text-center font-serif text-xl text-coffee hover:bg-coffee hover:text-cream transition-colors duration-200"
+                className="block border border-coffee/15 bg-white py-7 md:py-10 text-center font-serif text-lg md:text-xl text-coffee hover:bg-coffee hover:text-cream transition-colors duration-200"
               >
                 {c}
               </Link>
@@ -99,12 +99,12 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      <section className="max-w-6xl mx-auto px-6 py-10 md:py-16">
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-3xl text-center mb-12"
+          className="text-2xl md:text-3xl text-center mb-8 md:mb-12"
         >
           Dükkânımız
         </motion.h2>
