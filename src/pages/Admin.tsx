@@ -75,7 +75,9 @@ export default function Admin() {
     const ext = file.name.split('.').pop()
     const path = `${Date.now()}.${ext}`
     const { error } = await supabase.storage.from('product-photos').upload(path, file)
-    if (!error) {
+    if (error) {
+      alert(`Fotoğraf yüklenemedi: ${error.message}`)
+    } else {
       const { data } = supabase.storage.from('product-photos').getPublicUrl(path)
       setForm((f) => ({ ...f, photo_url: data.publicUrl }))
     }
